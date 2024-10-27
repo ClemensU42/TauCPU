@@ -3,7 +3,7 @@
 
 |byte|   0  |  1  |  2 |  3 |
 |----|------|-----|----|----|
-|type|cmd id|flags|arg1|arg2|
+|type|opcode|flags|arg1|arg2|
 |----|------|-----|----|----|
 
 ## List of all commands:
@@ -14,6 +14,14 @@
     - Store
 - swpr
     - Swap Registers
+- push
+    - push to stack
+- pop
+    - pop from stack
+- pout
+    - put value from register into specific port
+- pin
+    - read value from specific port into register
 #### Arrithmetic Operations:
 - add
     - Add
@@ -31,7 +39,7 @@
     - Xor
 - not
     - Not
-#### Conditions Operations:
+#### Condition & Branch Operations:
 - cmp
     - Compare
 - jmp
@@ -40,3 +48,14 @@
     - Jump if not equal
 - jeq
     - Jump if equal
+- jgr
+    - Jump if greater
+- jle
+    - Jump if less
+- jcr
+    - Jump if carry
+- call
+    - Calls a function, pushing the current value in program counter register onto stack
+- ret
+    - Returns from a function, poping the top value from stack into program counter
+
